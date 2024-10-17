@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --green-color: hsl(158, 36%, 37%);
+    --white-color: hsl(0, 0%, 100%);
+    --light-blue-color: hsl(228, 12%, 48%);
+    --dark-blue-color: hsl(212, 21%, 14%);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Montserrat;
+    background-color: hsl(30, 38%, 92%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--white-color);
+    border-radius: 10px;
+}
+
+.product-img {
+    max-inline-size: 100%;
+    block-size: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.content {
+   height: 100%;   
+   padding-left: 1.7rem;
+   padding-right: 1.7rem;
+
+}
+
+h1 {
+    font-family: Fraunces, sans-serif;
+    font-size: 1.8rem;
+    color: var(--dark-blue-color);
+}
+
+h3 {
+    font-variant-caps: all-small-caps;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+}
+
+ p {
+    font-size: 0.9rem;
+ }
+
+h1, h3 , p, .price-container {
+    margin-top: 0.8rem;
+}
+
+h3, p, .old-price {
+    color: var(--light-blue-color);
+}
+
+.old-price {
+    margin-left: 0.8rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    width: 100%;
+    height: 2.7rem;
+    margin: 1rem auto 1rem auto;
+    background-color: var(--green-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 600;
+ }
+
+.price {
+    color: var(--green-color);
+    font-size: 2rem;
+    font-family: Fraunces, sans-serif;
+    font-weight: 700;
+}
+
+ .old-price {
+    text-decoration: line-through;
+    font-size: 0.875rem;
+ }
+
+
+@media screen and (min-width: 500px) {
+    .container {
+        flex-direction: row;
+        max-width: 550px;
+         /* max-height for Safari */
+        max-height: 26rem;
+    }
+
+    .img-container {
+        width: 50%;
+        height: 100%;
+    }
+
+    .product-img {
+        height: 100%;
+        border-radius: 10px 0px 0px 10px;
+        object-fit: cover;
+    }
+
+    .content {
+        width: 50%;
+        margin-top: 1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+}
